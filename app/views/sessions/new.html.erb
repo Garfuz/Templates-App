@@ -4,8 +4,11 @@
     <p><%= flash[:error] %></p>
   <% end %>
 
-  <%= (:session, :url => sessions_path) do |f| %>
-    <%= f.input :email %>
-    <%= f.input :password %>
+  <%= form_for(:session, :url => session_path) do |f| %>
+    <%= f.text_field :email %>
+    <%= f.password_field :password %>
     <%= f.button :submit %>
   <% end %>
+
+
+<%= link_to 'Sign up to', new_user_path %>
