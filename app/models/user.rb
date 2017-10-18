@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_secure_password
 
+  has_secure_password
 
   email_regex = /\A[\w|-]+@[\w|-]+\.[a-z][a-z]+\z/i
 

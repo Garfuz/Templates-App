@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      redirect_to new_webpage_path
     else
       # render :text => "here"
       render action: 'new'
