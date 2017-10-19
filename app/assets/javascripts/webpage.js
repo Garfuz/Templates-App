@@ -1,13 +1,21 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+// function getimage() {
+  // var findimage = document.getElementById('profile_photo')
+//   // $.ajax({
+//     type: 'GET',
+      // console.log("text",findimage);
+//     url: imageArray[i],
+//     dataType: 'image/jpg',
+//     async: true,
+//     success: function (data) {
+//         $("#" + i).attr("src", 'data:image/png;base64,'+data);
+//     }
+// // }
 
-* Set the width of the side navigation to 250px */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+var findimage;
+    function onload() {
+        findimage = document.getElementById('profile_photo');
+    }
+    function getimage(){
+        console.log(findimage);
+    }

@@ -1,12 +1,25 @@
 <h1>Welcome! Please create YOUR very own website!</h1>
 
-<h2>To start, let's choose a background colour!</h2>
+<section class="website_builder">
+  <%= form_for(@user) do |w| %>
+    <fieldset>
+        <h2>To start, let's choose a background colour!</h2>
+          Color: <input class="jscolor" value="ab2567">
+    </fieldset>
 
+    <fieldset>
+      <h2>Great! Now let's personalize it. Please enter a link to your facebook photo here.</h2>
+      <input id="profile_photo" type="text" name="" value="">
+      <input type="button" value="click" onclick="getimage();"/>
+    </fieldset>
 
-<h2>Great! Now let's personalize it. Please enter a link to your facebook photo here.</h2>
+    <fieldset>
+      <h2>Looking good! Now lets link your instagram.</h2>
+    </fieldset>
 
+    <fieldset>
+      <h2>Amazing! Press "here" to create your very own personal webpage and populate it with some content!</h2>
 
-<h2>Looking good! Now lets link your instagram.</h2>
-
-
-<h2>Amazing! Press "here" to create your very own personal webpage and populate it with some content!</h2>
+    </fieldset>
+  <% end %>
+</section>
