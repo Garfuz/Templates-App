@@ -4,13 +4,13 @@
   <%= form_for(@webpage) do |w| %>
     <fieldset>
         <h2>To start, let's choose a background colour!</h2>
-          Color: <input class="jscolor" value="ab2567">
+          <%= w.text_field :color , class: 'jscolor', value: 'ab2567' %>
     </fieldset>
 
     <fieldset>
       <h2>Great! Now let's personalize it. Please enter a link to your facebook photo here.</h2>
-      <input id="profile_photo" type="text" name="" value="">
-      <input type="button" value="click" onclick="getimage();"/>
+        <%= w.text_field :photo, id: 'profile_photo', type: 'text' %>
+
     </fieldset>
 
     <fieldset>
@@ -19,7 +19,7 @@
 
     <fieldset>
       <h2>Amazing! Press the button below and enjoy your brand new, very own webpage!</h2>
-        <%= w.button :submit %>
+        <%= w.button :submit, value: 'click', onclick: 'getimage()' %>
     </fieldset>
   <% end %>
 </section>
