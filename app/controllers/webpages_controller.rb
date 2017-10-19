@@ -1,13 +1,22 @@
 class WebpagesController < ApplicationController
   def new
-    @site = Site.new
+    @webpage = Webpage.new
   end
 
   def create
-    @site = Site.new
-
+    @webpage = Webpage.new
+    @webpage.name = params [:user][:name]
+    @webpage.color = params [:user][:color]
+    @webpage.photo = params [:user][:photo]
+    # @webpage.instagram = [:user][:instagram]
+    if @webpage.save
+      redirect_to new_view_path
+    else
+      render action: "new"
+    end
   end
 
-  def edit
+  def show
+    @webpage = Webpage.find(params[:id])
   end
 end

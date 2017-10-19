@@ -12,7 +12,6 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to new_webpage_path
     else
-      # render :text => "here"
       render action: 'new'
     end
   end
