@@ -17,6 +17,6 @@ class WebpagesController < ApplicationController
   end
 
   def show
-    # @webpage = Webpage.find(params[:id])
+    @webpage = Webpage.find_by(params[:photo])
   end
 end
