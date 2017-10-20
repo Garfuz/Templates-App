@@ -10,13 +10,13 @@ class WebpagesController < ApplicationController
     @webpage.photo = params[:webpage][:photo]
     # @webpage.instagram = [:webpage][:instagram]
     if @webpage.save
-      redirect_to template_path
+      redirect_to webpage_path(@webpage.id)
     else
       render action: "new"
     end
   end
 
   def show
-    @webpage = Webpage.find_by(params[:photo])
+    @webpage = Webpage.find(params[:id])
   end
 end

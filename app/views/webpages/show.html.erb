@@ -1,18 +1,31 @@
-<h1>View#model</h1>
+<h1>Matt's Page</h1>
 <p>Welcome to my very own webpage!</p>
+
+<div class="white_strip">
+</div>
+
 
 <section class="row1">
   <box class="profile_photo">
-  <img src="<%= %>"/>
+    <img src="<%= @webpage.photo %>"/>
   </box>
 
-  <box class="instagram">
-
+  <box class="blog_content">
+    <h2>Text Here!</h2>
   </box>
 </section>
+
 
 <section class="row2">
-  <box class="blog_content">
-
+  <box class="instagram">
+    <img src="http://pluspng.com/img-png/instagram-png-instagram-png-logo-1455.png">
   </box>
 </section>
+
+
+
+<style>
+body {
+  background-color: #<%= @webpage.color %>;
+}
+</style>
