@@ -5,7 +5,7 @@ class WebpagesController < ApplicationController
 
   def create
     @webpage = Webpage.new
-    # @webpage.name = params [:webpage][:name]
+    @webpage.user = current_user
     @webpage.color = params[:webpage][:color]
     @webpage.photo = params[:webpage][:photo]
     # @webpage.instagram = [:webpage][:instagram]

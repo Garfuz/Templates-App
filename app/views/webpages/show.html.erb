@@ -11,7 +11,10 @@
   </box>
 
   <box class="blog_content">
-    <h2>Text Here!</h2>
+    <%= form_for @blog do |t| %>
+    <%= t.timestamp :date, :time %>
+    <%= t.text_field :content %>
+    <% end %>
   </box>
 </section>
 
